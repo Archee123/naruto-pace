@@ -1,0 +1,23 @@
+{
+  "name": "naruto-filler-guide",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Stremio metadata guide for the original 220 Naruto episodes",
+  "main": "addon.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "stremio-addon-sdk": "1.6.10"
+  },
+  "overrides": {
+    "router": {
+      "path-to-regexp": "0.1.13"
+    },
+    "tmp": "0.2.7"
+  }
+}

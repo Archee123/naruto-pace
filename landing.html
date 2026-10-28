@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Naruto Pace — watch with less filler</title>
+<meta name="description" content="Install Naruto Pace for Stremio. A watch path with 130 original Naruto episodes, canon labels and episode thumbnails.">
+<link rel="icon" href="/icon.png">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#100d10;color:#f8f4f2;font:16px/1.6 system-ui,sans-serif}body:before{content:"";position:fixed;inset:0;background:linear-gradient(90deg,#100d10 10%,#100d10de 65%,#100d10b0),url('https://images.metahub.space/background/medium/tt0409591/img') center/cover;z-index:-1}.shell{max-width:960px;margin:auto;padding:64px 28px}header{display:flex;align-items:center;gap:12px;font-weight:700}header img{width:42px;height:42px;border-radius:10px}.hero{display:grid;grid-template-columns:1fr 260px;gap:70px;align-items:center;padding:60px 0}.eyebrow{color:#ff974a;font-size:12px;letter-spacing:.15em;font-weight:750}h1{font-size:clamp(40px,6vw,64px);line-height:1.05;letter-spacing:-.05em;margin:18px 0 22px}p{color:#c9bdc1;max-width:470px}.poster{width:100%;border-radius:12px;box-shadow:0 24px 70px #0009}.install{display:inline-flex;background:#f27332;color:#170c08;font-weight:750;border-radius:8px;padding:13px 22px;text-decoration:none;margin:16px 0}.install:hover{background:#ff975b}.manual{margin-top:20px}label{display:block;font-size:13px;color:#b3a5ab;margin-bottom:8px}.copyrow{display:flex;gap:8px}input{min-width:0;width:100%;background:#211a20;border:1px solid #44333b;color:#ece3e7;border-radius:7px;padding:11px;font:12px monospace}button{border:1px solid #56424b;background:#30232b;color:white;border-radius:7px;padding:0 14px;cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid #ff975b;outline-offset:4px}.facts{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}.facts span{font-size:12px;border:1px solid #53404a;border-radius:20px;padding:4px 10px;color:#ead4db}.note{font-size:13px;border-top:1px solid #3b2c34;padding-top:24px}footer{font-size:12px;color:#a29199}a{color:#efac89}@media(max-width:650px){.shell{padding:28px 22px}.hero{grid-template-columns:1fr;gap:30px;padding:36px 0}.poster{max-width:210px;grid-row:1;justify-self:center}h1{font-size:44px}}
+</style>
+<style>
+.watch-stats{border-top:1px solid #44333b;padding:28px 0 36px}.stat-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}.stat-label{display:block;color:#c9bdc1;font-size:13px;margin-bottom:6px}.stat-value{display:block;font-size:clamp(24px,3.3vw,34px);font-weight:750;letter-spacing:-.04em;line-height:1.25}.stat-detail{display:block;color:#efac89;font-size:13px;margin-top:7px}.stats-context{font-size:12px;line-height:1.7;max-width:none;color:#a99ba2;margin:24px 0 0}@media(max-width:520px){.stat-grid{grid-template-columns:1fr;gap:24px}.watch-stats{padding-top:24px}.stat-value{font-size:30px}}
+</style>
+</head>
+<body><div class="shell">
+<header><img src="/icon.png" alt="">Naruto Pace</header>
+<main class="hero"><div><h1>Naruto without<br>the filler.</h1><p>A shorter path through the original series, following the <a href="https://www.animefillerlist.com/shows/naruto">Anime Filler List guide</a>. Original episode numbers, canon labels, and thumbnails—all inside Stremio.</p><a class="install" id="install" href="/manifest.json">Install in Stremio</a><div class="manual"><label for="manifest">Or paste this link into Stremio → Add-ons</label><div class="copyrow"><input id="manifest" readonly><button id="copy" type="button">Copy</button></div></div></div><img class="poster" src="https://images.metahub.space/poster/medium/tt0409591/img" alt="Naruto Pace poster"></main>
+<section class="watch-stats" aria-label="Naruto watch-time comparison">
+<div class="stat-grid">
+<div><span class="stat-label">Filler across original Naruto</span><strong class="stat-value">40.9%</strong><span class="stat-detail">90 of 220 episodes</span></div>
+<div><span class="stat-label">Skipped with Naruto Pace</span><strong class="stat-value">90 episodes</strong><span class="stat-detail">≈ 33 hours saved</span></div>
+<div><span class="stat-label">Your watch: Naruto Pace</span><strong class="stat-value">130 episodes</strong><span class="stat-detail">≈ 47 hours 40 minutes to watch</span></div>
+</div>
+</section>
+</div><script>
+const url=location.origin+'/manifest.json';document.getElementById('manifest').value=url;
+document.getElementById('install').href='stremio://'+location.host+'/manifest.json';
+document.getElementById('copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(url);document.getElementById('copy').textContent='Copied'}catch{document.getElementById('manifest').select()}});
+</script></body></html>
