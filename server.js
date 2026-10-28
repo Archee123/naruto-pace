@@ -10,11 +10,12 @@ function createHandler(options) {
   artwork.set('/favicon.ico', artwork.get('/icon.png'));
   const landing = fs.readFileSync(path.join(__dirname, 'landing.html'));
   return (req, res) => {
-    if (artwork.has(req.url)) {
+    const pathname = (req.url || '/').split('?')[0];
+    if (artwork.has(pathname)) {
       res.writeHead(200, { 'Content-Type': 'image/png', 'Access-Control-Allow-Origin': '*', 'Cache-Control': 'public, max-age=3600' });
-      return res.end(artwork.get(req.url));
+      return res.end(artwork.get(pathname));
     }
-    if (req.url === '/') {
+    if (pathname === '/') {
       res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
       return res.end(landing);
     }
